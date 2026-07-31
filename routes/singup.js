@@ -15,4 +15,6 @@ route.get("/dashboard",userFind,(req,res)=>{
 res.send("welcome to dashboard")
 })
 
+
+
 export default route
