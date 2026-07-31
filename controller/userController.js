@@ -15,6 +15,7 @@ res.send("signup successfull")
     } catch (error) {
         res.send(error)
     }
+    
 }
 
 const loginUser= async (req,res)=>{
@@ -43,16 +44,12 @@ req.session.user = findEmail
     }
 }
 
+
 function userFind(req,res,next) {
     if (!req.session.user) {
      return   res.send("please login first")
     }
    next() 
 }
-
-
-
-
-
 
 export  {signupUser,loginUser,userFind}
