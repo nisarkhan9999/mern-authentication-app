@@ -7,13 +7,20 @@ route.get('/signup',(req,res)=>{
 })
 route.post("/signup",signupUser)
 
+
 route.get("/login",(req,res)=>{
     res.render("login")
 })
+
+
+
 route.post("/login",loginUser)
 route.get("/dashboard",userFind,(req,res)=>{
 res.send("welcome to dashboard")
 })
+
+
+
 
 
 
